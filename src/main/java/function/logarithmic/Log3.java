@@ -4,8 +4,7 @@ import function.Function;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class Log2 implements Function<Double, Double> {
-
+public class Log3 implements Function<Double, Double> {
     private Ln ln;
 
     @Override
@@ -15,6 +14,6 @@ public class Log2 implements Function<Double, Double> {
             return Double.NaN;
         }
 
-        return ln.apply(x, eps) / ln.apply(2D, eps);
+        return ln.apply(x, eps) / ln.apply(3D, eps);
     }
 }

@@ -1,6 +1,6 @@
 package function.trigonometric;
 
-import java.util.function.Function;
+import function.Function;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -10,12 +10,12 @@ public class Tan implements Function<Double, Double> {
     private Cos cos;
 
     @Override
-    public Double apply(Double x) {
+    public Double apply(Double x, Double eps) {
 
         if (x.isInfinite() || x.isNaN()) {
             return Double.NaN;
         }
 
-        return sin.apply(x) / cos.apply(x);
+        return sin.apply(x, eps) / cos.apply(x, eps);
     }
 }
