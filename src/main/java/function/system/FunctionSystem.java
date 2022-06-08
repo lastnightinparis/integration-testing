@@ -7,9 +7,7 @@ import function.logarithmic.Log3;
 import function.logarithmic.Log5;
 import function.trigonometric.Tan;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 @AllArgsConstructor
 public class FunctionSystem implements Function<Double, Double> {
 

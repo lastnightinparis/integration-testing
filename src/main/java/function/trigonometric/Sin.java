@@ -13,7 +13,7 @@ public class Sin implements Function<Double, Double> {
             return Double.NaN;
         }
 
-        x = FunctionUtils.normalize(x);
+        //x = FunctionUtils.normalize(x);
 
         int cnt = 0;
         double result = 0;
