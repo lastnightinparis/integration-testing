@@ -8,6 +8,9 @@ public class Ln implements Function<Double, Double> {
 
     @Override
     public Double apply(Double x, Double eps) {
+
+        eps /= 10;
+
         if (x.isInfinite() || x.isNaN() || Double.compare(x, 0.) < 0) {
             return Double.NaN;
         }
@@ -21,6 +24,7 @@ public class Ln implements Function<Double, Double> {
             result += term;
             cnt++;
         } while (Double.compare(Math.abs(term), eps) >= 0);
+
         return 2 * result;
     }
 

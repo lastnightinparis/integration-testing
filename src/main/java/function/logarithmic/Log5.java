@@ -2,16 +2,15 @@ package function.logarithmic;
 
 
 import function.Function;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class Log5 implements Function<Double, Double> {
 
     private Ln ln;
 
     @Override
     public Double apply(Double x, Double eps) {
-
         if (x.isInfinite() || x.isNaN() || Double.compare(x, 0.) < 0) {
             return Double.NaN;
         }

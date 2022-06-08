@@ -16,7 +16,7 @@ public class Cos implements Function<Double, Double> {
 
         x = FunctionUtils.normalize(x);
 
-        int cnt = 0;
+        int cnt = 1;
         double result = 0;
         double term;
         do {
@@ -26,7 +26,7 @@ public class Cos implements Function<Double, Double> {
 
         } while (Double.compare(Math.abs(term), eps) >= 0);
 
-        return result;
+        return 1 - result;
     }
 
     private Double nextTerm(int n, double v) {

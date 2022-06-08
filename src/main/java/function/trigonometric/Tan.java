@@ -1,9 +1,9 @@
 package function.trigonometric;
 
 import function.Function;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class Tan implements Function<Double, Double> {
 
     private Sin sin;
@@ -11,7 +11,6 @@ public class Tan implements Function<Double, Double> {
 
     @Override
     public Double apply(Double x, Double eps) {
-
         if (x.isInfinite() || x.isNaN()) {
             return Double.NaN;
         }
